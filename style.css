@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  background-image: url(./img/bgd1.jpg);
+  background-repeat: no-repeat;
+}
+
+.top_space {
+  display: block;
+  min-height: 800px;
+  height: 100%;
+}
+
+.nav_panel {
+  position: sticky;
+  bottom: 150px;
+  left: 20px;
+
+  /* display: flex; */
+  width: fit-content;
+
+  /* border: solid;
+  border-width: 1px;
+  border-radius: 5px; */
+}
+
+ul {
+  padding: 5px; /* equalizing default value*/
+  margin: 5px;
+
+  list-style-type: none;
+  /* border: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  border-color: brown; */
+
+  font-family: 'Partita';
+  font-size: 44px;
+  color: white;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+@font-face {
+  font-family: 'Partita';
+  src: url('fonts/FontsFree-Net-Partita-RegularItalic.ttf');
+}
