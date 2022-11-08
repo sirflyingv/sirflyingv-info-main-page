@@ -1,38 +1,17 @@
+@font-face {
+  font-family: 'Partita';
+  src: url('fonts/FontsFree-Net-Partita-RegularItalic.ttf');
+}
+
 body {
   margin: 0;
-  background-image: url(./img/bgd1.jpg);
-  background-repeat: no-repeat;
-}
-
-.top_space {
-  display: block;
-  min-height: 800px;
-  height: 100%;
-}
-
-.nav_panel {
-  position: sticky;
-  bottom: 150px;
-  left: 20px;
-
-  /* display: flex; */
-  width: fit-content;
-
-  /* border: solid;
-  border-width: 1px;
-  border-radius: 5px; */
+  background: url(./img/bgd1.jpg) no-repeat top left fixed;
 }
 
 ul {
   padding: 5px; /* equalizing default value*/
   margin: 5px;
-
   list-style-type: none;
-  /* border: solid;
-  border-width: 1px;
-  border-radius: 5px;
-  border-color: brown; */
-
   font-family: 'Partita';
   font-size: 44px;
   color: white;
@@ -43,7 +22,51 @@ ul {
   color: inherit;
 }
 
-@font-face {
-  font-family: 'Partita';
-  src: url('fonts/FontsFree-Net-Partita-RegularItalic.ttf');
+/* .link:hover {
+  filter: blur(30);
+  transition: 0.2s;
+} */
+
+.nav_panel {
+  position: fixed;
+  bottom: 150px;
+  left: 20px;
+  transition-property: bottom 0.2s;
 }
+
+@media screen and (max-height: 340px) {
+  .nav_panel {
+    position: fixed;
+    bottom: 10px;
+    left: 20px;
+    transition: 0.6s;
+  }
+}
+
+@media screen and (max-height: 200px) {
+  .link {
+    filter: blur(200);
+    transition: 1s;
+  }
+
+  .nav_panel {
+    opacity: 0;
+    transition: 1s;
+  }
+}
+
+@media screen and (min-height: 200px) {
+  .nav_panel {
+    opacity: 1;
+    transition: 1s;
+  }
+}
+
+/* @media screen and (min-height: 400px) {
+  .nav_panel {
+    position: fixed;
+    bottom: 150px;
+    left: 20px;
+    transition: 0.2s;
+  }
+} */
