@@ -22,11 +22,6 @@ ul {
   color: inherit;
 }
 
-/* .link:hover {
-  filter: blur(30);
-  transition: 0.2s;
-} */
-
 .nav_panel {
   position: fixed;
   bottom: 150px;
@@ -46,19 +41,19 @@ ul {
 @media screen and (max-height: 200px) {
   .link {
     filter: blur(200);
-    transition: 1s;
+    transition: 0.6s;
   }
 
   .nav_panel {
     opacity: 0;
-    transition: 1s;
+    transition: 0.6s;
   }
 }
 
 @media screen and (min-height: 200px) {
   .nav_panel {
     opacity: 1;
-    transition: 1s;
+    transition: 0.6s;
   }
 }
 
